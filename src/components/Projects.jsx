@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { ExternalLink, Github, Play, Zap } from "lucide-react";
+import lawyerupimg from "../assets/lawyerup.png" 
+import navigateaiimg from "../assets/navigateai.png";
 
 const projects = [
   {
@@ -30,8 +32,7 @@ const projects = [
     title: "LawyerUp",
     description:
       "AI-powered legal helpdesk that answers legal queries, explains rights, and recommends next steps. Built for LexHack.",
-    image:
-      "https://images.unsplash.com/photo-1581093588401-4f7f50c249f5?auto=format&fit=crop&w=800&q=80",
+    image:lawyerupimg,
     tags: ["LegalTech", "RAG", "Chatbot", "Hackathon winner"],
     categories: ["Full Stack", "Chatbots", "AI Agents"],
 
@@ -43,7 +44,7 @@ const projects = [
     description:
       "Real-time YOLO + OpenCV-based vehicle detection and multi-object tracker with timestamping and counting.",
     image:
-      "https://images.unsplash.com/photo-1611926653454-fcd3fbc31cbb?auto=format&fit=crop&w=800&q=80",
+      navigateaiimg,
     tags: ["YOLO", "OpenCV", "Python", "Computer Vision", "Hackathon Winner"],
     categories: ["Computer Vision", "AI/ML"],
     liveUrl: "https://navigateai.streamlit.app/",
@@ -55,9 +56,9 @@ const projects = [
     description:
       "A sleek MERN-based blog platform powered by Appwrite for backend services and auth. Full-stack showcase project.",
     image:
-      "https://images.unsplash.com/photo-1581276879432-15a48ed1d3f8?auto=format&fit=crop&w=800&q=80",
+      "https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx.jpg",
     tags: ["MERN", "Appwrite", "Blog", "Full Stack"],
-    categories: ["Full Stack", "Frontend"],
+    categories: ["Full Stack"],
     githubUrl: "https://github.com/singhalansh/megablog",
   },
   {
@@ -66,7 +67,7 @@ const projects = [
     description:
       "Empathetic RAG-based chatbot for mental health support built with n8n and MongoDB, no-code workflows only.",
     image:
-      "https://images.unsplash.com/photo-1612832021364-c69b5d2343ff?auto=format&fit=crop&w=800&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3q4meyK9t48AxulnZhiKJbQKSCO4txaf_yA&s",
     tags: ["Mental Health", "n8n", "RAG", "MongoDB"],
     categories: ["Chatbots", "AI Agents"],
   },
@@ -76,7 +77,7 @@ const projects = [
     description:
       "Your personal AI assistant trained on all things Ansh — built using RAG and embedding-based retrieval.",
     image:
-      "https://images.unsplash.com/photo-1633417221466-2ac1e76e5a1e?auto=format&fit=crop&w=800&q=80",
+      "https://i0.wp.com/living.ai/wp-content/uploads/2020/12/Details18.jpg?fit=680%2C440&quality=89&ssl=1",
     tags: ["RAG", "Embeddings", "Chatbot", "OpenAI"],
     categories: ["Personal", "AI Agents", "Chatbots"],
   },
@@ -86,7 +87,7 @@ const projects = [
     description:
       "Full-stack dashboard to manage employees, tasks, and leaves with modern UI and role-based access control.",
     image:
-      "https://images.unsplash.com/photo-1626791631513-50ffcd3a0f87?auto=format&fit=crop&w=800&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoszakz2X5s1Vu0AgSyxCxTpDMckLOhrxQxQ&s",
     tags: ["MERN", "Dashboard", "RBAC", "CRUD"],
     categories: ["Full Stack"],
     githubUrl: "https://github.com/singhalansh/ems-platform",
@@ -97,7 +98,7 @@ const projects = [
     description:
       "A utility for handling multi-label imbalance in datasets using MLSMOTE technique. Plug-and-play for ML pipelines.",
     image:
-      "https://images.unsplash.com/photo-1605819321438-4e7ef0a6bfa4?auto=format&fit=crop&w=800&q=80",
+      "https://dl.acm.org/cms/attachment/html/10.1145/3512452.3512453/assets/html/images/image2.png",
     tags: ["Machine Learning", "Data Imbalance", "SMOTE", "Python"],
     categories: ["AI/ML"],
   },
@@ -107,7 +108,7 @@ const projects = [
     description:
       "3D UNet implementation in PyTorch for volumetric data segmentation of medical scans. GPU-accelerated.",
     image:
-      "https://images.unsplash.com/photo-1581093448798-5ff9dfe1ed55?auto=format&fit=crop&w=800&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5FtYNQLtoqdTeke5NLnhSenhIngf2c-LZA&s",
     tags: ["Medical Imaging", "3D UNet", "PyTorch", "Deep Learning"],
     categories: ["AI/ML"],
   },
@@ -117,7 +118,7 @@ const projects = [
     description:
       "A virtual keyboard that uses OpenCV and hand landmark tracking to detect fingertip movements and simulate key presses in real-time.",
     image:
-      "https://images.unsplash.com/photo-1610636246083-8a3f485e7c1c?auto=format&fit=crop&w=800&q=80",
+      "https://editor.analyticsvidhya.com/uploads/18187Screenshot%202021-09-16%20224952.png",
     tags: ["OpenCV", "Hand Tracking", "Python", "Human-Computer Interaction"],
     categories: ["Computer Vision", "AI/ML", "Personal"],
     githubUrl:
@@ -129,7 +130,7 @@ const projects = [
     description:
       "A real-time computer vision system that detects and highlights facial features including face, eyes, and lips using OpenCV. Built for rapid and responsive facial analysis.",
     image:
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwJns0JqaFaxnXG_zbRtFFVzOfco1uIxypgQ&s",
     tags: ["OpenCV", "Face Detection", "Eyes", "Lips", "Real-time", "Python"],
     categories: ["Computer Vision", "AI/ML", "Personal"],
     githubUrl:
@@ -143,7 +144,6 @@ const categories = [
   "AI/ML",
   "Chatbots",
   "Computer Vision",
-  "Frontend",
   "Full Stack",
   "Mobile",
   "Personal",
