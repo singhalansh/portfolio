@@ -4,11 +4,11 @@ import Right from "./Right";
 
 function Hero() {
   return (
-    <div className="min-h-screen flex relative">
+    <div className="h-fit md:min-h-screen flex flex-col lg:flex-row relative overflow-hidden">
       {/* Let's Talk Button */}
       <a
         href="#contact"
-        className="absolute top-8 right-8 z-50 px-6 py-3 rounded-full text-lg font-semibold border-2 border-[var(--color-primary)] text-[var(--color-primary)] overflow-hidden group"
+        className="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8 z-50 px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base lg:text-lg font-semibold border-2 border-[var(--color-primary)] text-[var(--color-primary)] overflow-hidden group"
       >
         <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
           Let's Talk!
@@ -21,4 +21,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default Hero; 
