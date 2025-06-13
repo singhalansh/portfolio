@@ -162,7 +162,7 @@ export default function Projects() {
         );
 
   return (
-    <section className="min-h-screen py-20 px-6 bg-[#F8F8F8] font-poppins">
+    <section className="min-h-screen py-20 px-6 bg-[#F8F8F8] font-poppins" id="portfolio">
       {/* Header */}
       <div className="max-w-7xl mx-auto mb-16">
         <div className="text-center mb-12">

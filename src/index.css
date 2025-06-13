@@ -4,6 +4,7 @@
   html, body {
     @apply font-sans overscroll-none overflow-x-hidden;
     background: #f8f8f8;
+    scroll-behavior: smooth;
   }
 }
 

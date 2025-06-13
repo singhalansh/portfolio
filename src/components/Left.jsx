@@ -43,7 +43,7 @@ function Left() {
                     <div className="flex justify-center gap-16 px-8 py-10 relative top-30 w-full">
                         <div className="flex flex-col items-start">
                             <span className="text-3xl md:text-5xl font-light text-gray-800 leading-snug">
-                                +10
+                                10+
                             </span>
                             <span className="text-md text-gray-500 font-medium tracking-wider uppercase mt-2">
                                 Projects
@@ -51,7 +51,7 @@ function Left() {
                         </div>
                         <div className="flex flex-col items-center">
                             <span className="text-3xl md:text-5xl font-light text-gray-800 leading-snug">
-                                +3
+                                3+
                             </span>
                             <span className="text-md text-gray-500 font-medium tracking-wider uppercase mt-2">
                                 Hackathons won

@@ -52,7 +52,7 @@ export default function WhatIDo() {
   };
 
   return (
-    <section className="min-h-[60vh] py-16 px-6 bg-[#f8f8f8]">
+    <section className="min-h-[60vh] py-16 px-6 bg-[#f8f8f8]" id="services">
       <h1 className="text-4xl  text-gray-800 text-center mb-8">What I Do</h1>
       <p className="text-center text-gray-500 text-lg mb-10 max-w-2xl mx-auto">
         From full-stack engineering to deploying AI-driven solutions — I bring

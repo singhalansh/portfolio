@@ -8,6 +8,7 @@ function About() {
     <div
       className="w-full h-[70vh] flex py-15"
       style={{ background: "#f8f8f8" }}
+      id="about"
     >
       {/* LEFT TEXT SECTION */}
       <div className="aboutme w-[40%] px-20">
