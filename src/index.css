@@ -32,3 +32,12 @@
     animation: fadeIn 2s ease-out forwards;
   }
 }
+
+/* Tailwind config or CSS variables (if using Tailwind, update tailwind.config.js theme colors) */
+/* If using index.css or a global CSS file, add: */
+:root {
+  --color-primary: #222222;
+  --color-secondary: #7B7B7B;
+  --color-tertiary: #F8F8F8;
+  --color-white: #FFFFFF;
+}
