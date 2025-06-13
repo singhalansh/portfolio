@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import Projects from './components/Projects';
 import AchievementsSection from './components/AchievementsSection';
+import LetsTalkFooter from './components/LetsTalkFooter';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <WhatIDo />
       <Projects />
       <AchievementsSection />
+      <LetsTalkFooter />
     </div>
   )
 }
