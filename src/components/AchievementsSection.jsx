@@ -35,7 +35,6 @@ const AchievementsSection = () => {
   const achievements = [
     {
       title: "LexHack",
-    
       position: "Winner",
       type: "hackathon",
       location: "Delhi, India",
