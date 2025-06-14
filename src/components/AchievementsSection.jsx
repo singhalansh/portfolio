@@ -45,6 +45,7 @@ const AchievementsSection = () => {
       color: "from-yellow-400 to-orange-400",
       icon: Trophy,
       rank: "",
+      
     },
     {
       title: "Tech Arena",

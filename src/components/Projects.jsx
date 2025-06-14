@@ -35,7 +35,7 @@ const projects = [
     image:lawyerupimg,
     tags: ["LegalTech", "RAG", "Chatbot", "Hackathon winner"],
     categories: ["Full Stack", "Chatbots", "AI Agents"],
-
+    liveUrl: "https://lawyerupapp.vercel.app/",
     githubUrl: "https://github.com/singhalansh/lawyerup-app",
   },
   {
