@@ -40,7 +40,7 @@ const AchievementsSection = () => {
       location: "Delhi, India",
       participants: "30+ teams",
       image: lexhack,
-      description: "Champion in legal tech innovation hackathon",
+      description: "on the podium in legal tech innovation hackathon",
       tags: ["Legal Tech", "AI/ML", "Innovation"],
       color: "from-yellow-400 to-orange-400",
       icon: Trophy,
