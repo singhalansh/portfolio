@@ -27,7 +27,7 @@ function About() {
       </div>
 
       {/* MIDDLE CARD SECTION */}
-      <div className="middle w-full sm:w-80 lg:w-[20%] mx-auto lg:mx-0 bg-white rounded-2xl h-auto relative p-6 sm:p-7 lg:p-8 shadow-2xl hover:scale-105 transition-all duration-300 order-2">
+      <div className="middle w-full sm:w-80 lg:w-[20%] mx-auto lg:mx-0 bg-white rounded-2xl h-fit relative p-6 sm:p-7 lg:p-8 shadow-2xl hover:scale-105 transition-all duration-300 order-2">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-black">
           10X
         </h1>

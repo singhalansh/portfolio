@@ -4,7 +4,7 @@ import Right from "./Right";
 
 function Hero() {
   return (
-    <div className="h-fit min-h-[100vh] md:min-h-screen flex flex-col lg:flex-row relative overflow-hidden">
+    <div className="min-h-[100vh] flex flex-col lg:flex-row relative overflow-hidden">
       {/* Let's Talk Button */}
       <a
         href="#contact"
