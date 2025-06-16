@@ -1,5 +1,4 @@
 import React from "react";
-import LeftNav from "./LeftNav";
 
 function Left() {
   return (
@@ -7,7 +6,6 @@ function Left() {
       className="w-full lg:w-[50%] lg:h-screen flex flex-col left"
       style={{ background: "#f8f8f8" }}
     >
-      <LeftNav />
 
       <div className="flex flex-grow w-full overflow-hidden">
         {/* Sidebar - Hidden on mobile, visible on tablet and up */}

@@ -3,7 +3,7 @@ import meimg from "../assets/me.png";
 
 function Right() {
   return (
-    <div className="w-full lg:w-1/2 h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen relative bg-transparent flex items-center justify-center lg:items-end">
+    <div className=" w-full lg:w-1/2 h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen relative bg-[var(--color-tertiary)] flex items-center justify-center lg:items-end">
       <img
         src={meimg}
         alt="ansh"

@@ -1,7 +1,9 @@
 import React from "react";
 import meimg2 from "../assets/me2.jpg";
 import meimg3 from "../assets/me3.jpg";
+import LeftNav from "./LeftNav";
 import { CheckCircle } from "lucide-react";
+import { div } from "framer-motion/client";
 
 function About() {
   return (
@@ -10,6 +12,7 @@ function About() {
       style={{ background: "#f8f8f8" }}
       id="about"
     >
+      
       {/* LEFT TEXT SECTION */}
       <div className="aboutme w-full lg:w-[40%] px-4 sm:px-8 lg:px-16 xl:px-20 order-1">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-black">
@@ -38,7 +41,7 @@ function About() {
           src={meimg2}
           alt="my image"
           className="rounded-xl mt-6 grayscale contrast-110 brightness-105 w-full h-auto"
-        />
+          />
       </div>
 
       {/* RIGHT IMAGE BUTTON SECTION */}
@@ -81,6 +84,7 @@ function About() {
         </div>
       </div>
     </div>
+        
   );
 }
 

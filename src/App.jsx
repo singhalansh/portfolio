@@ -1,24 +1,126 @@
-import React from "react";
-import Hero from "./components/Hero";
+import { useRef, useEffect, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Hero from "./components/Hero.jsx";
 import About from "./components/About";
 import WhatIDo from "./components/WhatIDo";
-import "swiper/css";
-import "swiper/css/free-mode";
 import Projects from "./components/Projects";
 import AchievementsSection from "./components/AchievementsSection";
 import LetsTalkFooter from "./components/LetsTalkFooter";
+import LeftNav from "./components/LeftNav";
+import "swiper/css";
+import "swiper/css/free-mode";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
-  return (
-    <div>
-      <Hero />
-      <About />
-      <WhatIDo />
-      <Projects />
-      <AchievementsSection />
-      <LetsTalkFooter />
-    </div>
-  );
+    const heroRef = useRef(null);
+    const curtainContainerRef = useRef(null);
+    const contentRef = useRef(null);
+    const [contentHeight, setContentHeight] = useState(0);
+    const [showLeftNav, setShowLeftNav] = useState(false);
+
+    useEffect(() => {
+        const calculateContentHeight = () => {
+            if (contentRef.current) {
+                const height = contentRef.current.offsetHeight;
+                setContentHeight(height);
+            }
+        };
+
+        calculateContentHeight();
+        window.addEventListener("resize", calculateContentHeight);
+
+        return () => {
+            window.removeEventListener("resize", calculateContentHeight);
+        };
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (heroRef.current) {
+                const heroRect = heroRef.current.getBoundingClientRect();
+                const heroBottom = heroRect.bottom + window.scrollY;
+                setShowLeftNav(window.scrollY >= heroBottom);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        // Run once on mount in case user is not at top
+        handleScroll();
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    useEffect(() => {
+        if (!contentHeight) return;
+
+        // Kill previous triggers to avoid duplicates
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+
+        ScrollTrigger.create({
+            trigger: curtainContainerRef.current,
+            start: "top top",
+            end: `+=${contentHeight}`, // Changed back to full contentHeight for complete scroll
+            scrub: 0.01, // Reduced from 0.5 to 0.2 for much faster scroll
+            pin: true,
+            anticipatePin: 1,
+            onUpdate: (self) => {
+                const progress = self.progress;
+                gsap.set(heroRef.current, {
+                    yPercent: -100 * progress, // Changed back to -100 for complete scroll up
+                    ease: "none",
+                });
+            },
+        });
+
+        return () => {
+            ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        };
+    }, [contentHeight]);
+    return (
+        <div className="overflow-x-hidden lg:overflow-y-hidden">
+            <div className="fixed top-0 left-0 z-[150] w-full">
+                <LeftNav visible={showLeftNav} />
+            </div>
+
+            <div
+                ref={curtainContainerRef}
+                className="relative z-[100]"
+                style={{ height: `${contentHeight}px` }}
+            >
+                {/* Content */}
+                <div
+                    ref={contentRef}
+                    className="absolute top-0 w-full overflow-hidden"
+                >
+                    <div className="relative" id="about">
+                        <About />
+                    </div>
+                    <div className="relative" id="whatido">
+                        <WhatIDo />
+                    </div>
+                    <div className="relative" id="projects">
+                        <Projects />
+                    </div>
+                    <div className="relative" id="achievements">
+                        <AchievementsSection />
+                    </div>
+                    <div className="relative" id="contact">
+                        <LetsTalkFooter />
+                    </div>
+                </div>
+
+                {/* Hero */}
+                <div
+                    ref={heroRef}
+                    className="absolute top-0 left-0 w-full h-screen z-[200]"
+                >
+                    <Hero />
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default App;
