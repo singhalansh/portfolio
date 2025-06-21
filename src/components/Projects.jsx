@@ -3,6 +3,7 @@ import { ExternalLink, Github, Play, Zap } from "lucide-react";
 import lawyerupimg from "../assets/lawyerup.png" 
 import navigateaiimg from "../assets/navigateai.png";
 
+
 const projects = [
   {
     id: 1,
@@ -38,8 +39,20 @@ const projects = [
     liveUrl: "https://lawyerupapp.vercel.app/",
     githubUrl: "https://github.com/singhalansh/lawyerup-app",
   },
-  {
+   {
     id: 4,
+    title: "Flipkart Clone",
+    description:
+      "A full-featured Flipkart clone built with modern web technologies, featuring authentication, product listings, cart, and responsive UI.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrx6s7w6AM2E8Iym-rnzSPoYkRoBIj_OU-IA&s",
+    tags: ["React", "E-commerce", "Clone", "Full Stack"],
+    categories: ["Full Stack"],
+    liveUrl: "https://flipkartcloneansh.vercel.app/",
+    githubUrl: "https://github.com/singhalansh/flipkart-clone",
+  },
+  {
+    id: 5,
     title: "Navigate AI - Object Tracker",
     description:
       "Real-time YOLO + OpenCV-based vehicle detection and multi-object tracker with timestamping and counting.",
@@ -50,8 +63,9 @@ const projects = [
     liveUrl: "https://navigateai.streamlit.app/",
     githubUrl: "https://github.com/singhalansh/object-detection-and-tracking",
   },
+  
   {
-    id: 5,
+    id: 6,
     title: "MegaBlog",
     description:
       "A sleek MERN-based blog platform powered by Appwrite for backend services and auth. Full-stack showcase project.",
@@ -62,7 +76,7 @@ const projects = [
     githubUrl: "https://github.com/singhalansh/megablog",
   },
   {
-    id: 6,
+    id: 7,
     title: "Mental Health Bot",
     description:
       "Empathetic RAG-based chatbot for mental health support built with n8n and MongoDB, no-code workflows only.",
@@ -72,7 +86,7 @@ const projects = [
     categories: ["Chatbots", "AI Agents"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Bablu Bot",
     description:
       "Your personal AI assistant trained on all things Ansh — built using RAG and embedding-based retrieval.",
@@ -82,7 +96,7 @@ const projects = [
     categories: ["Personal", "AI Agents", "Chatbots"],
   },
   {
-    id: 8,
+    id: 9,
     title: "EMS - Employee Manager",
     description:
       "Full-stack dashboard to manage employees, tasks, and leaves with modern UI and role-based access control.",
@@ -93,7 +107,7 @@ const projects = [
     githubUrl: "https://github.com/singhalansh/ems-platform",
   },
   {
-    id: 9,
+    id: 10,
     title: "MLSMOTE Balancer",
     description:
       "A utility for handling multi-label imbalance in datasets using MLSMOTE technique. Plug-and-play for ML pipelines.",
@@ -103,7 +117,7 @@ const projects = [
     categories: ["AI/ML"],
   },
   {
-    id: 10,
+    id: 11,
     title: "UNet 3D Medical Segmentation",
     description:
       "3D UNet implementation in PyTorch for volumetric data segmentation of medical scans. GPU-accelerated.",
@@ -113,7 +127,7 @@ const projects = [
     categories: ["AI/ML"],
   },
   {
-    id: 11,
+    id: 12,
     title: "Virtual Keyboard ",
     description:
       "A virtual keyboard that uses OpenCV and hand landmark tracking to detect fingertip movements and simulate key presses in real-time.",
@@ -125,7 +139,7 @@ const projects = [
       "https://github.com/singhalansh/projects/blob/master/Virtual_Keyboard.py",
   },
   {
-    id: 12,
+    id: 13,
     title: "VisionScope ",
     description:
       "A real-time computer vision system that detects and highlights facial features including face, eyes, and lips using OpenCV. Built for rapid and responsive facial analysis.",
@@ -136,7 +150,9 @@ const projects = [
     githubUrl:
       "https://github.com/singhalansh/projects/blob/master/smile%20detection.py",
   },
+ 
 ];
+
 
 const categories = [
   "All",

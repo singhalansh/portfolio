@@ -18,9 +18,9 @@ function LeftNav({ visible = false }) {
     console.log(visible)
     return (
         <nav
-            className={`!fixed w-full px-4 sm:px-6 lg:px-8 py-4 lg:py-6 lg:pl-60 ${
+            className={`!fixed w-full px-4 sm:px-6 lg:px-8 py-2 lg:pl-60 ${
                 visible ? "flex" : "hidden"
-            } items-center justify-between transition-all duration-500 bg-[var(--color-tertiary)]/40 backdrop-blur-lg`}
+            } items-center justify-between  transition-all duration-500 bg-[var(--color-tertiary)]/40 backdrop-blur-lg`}
             style={{
                 backgroundColor: "rgba(248,248,248, 0.25)", // fallback to a more translucent purple
                 backdropFilter: "blur(12px)",
