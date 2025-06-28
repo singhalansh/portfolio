@@ -20,7 +20,7 @@ const projects = [
         title: "VitalsView – Patient Health Dashboard",
         description:
             "A secure dashboard built for GLP-1 weight-loss patients to track progress, visualize vitals, view shipment info, and chat with an AI assistant for guidance.",
-        image: "https://user-images.githubusercontent.com/72171307/275820319-cc7aa3f5-81df-496d-97c7-5db7b2c60156.png",
+        image: "https://t3.ftcdn.net/jpg/02/68/29/36/360_F_268293613_UcIcq3A1HnJqdW6PjF8FuEid9UjWL3Dg.jpg",
         tags: ["React", "Supabase", "AI Chatbot", "Healthcare", "Full Stack"],
         categories: ["Dashboards", "AI Assistants"],
         liveUrl: "https://vitalsview.vercel.app",
