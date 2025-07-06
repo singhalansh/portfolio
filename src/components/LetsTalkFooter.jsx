@@ -13,6 +13,7 @@ const LetsTalkFooter = () => {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState("");
+    const [emptyError, setEmptyError] = useState("");
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -24,6 +25,20 @@ const LetsTalkFooter = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        // Empty check for required fields
+        if (
+            !formData.firstName.trim() ||
+            !formData.lastName.trim() ||
+            !formData.email.trim() ||
+            !formData.subject.trim() ||
+            !formData.message.trim()
+        ) {
+            setEmptyError("Please fill in all required fields.");
+            setSubmitStatus("");
+            return;
+        } else {
+            setEmptyError("");
+        }
         setIsSubmitting(true);
         setSubmitStatus("");
 
@@ -223,6 +238,13 @@ const LetsTalkFooter = () => {
                                     )}
                                 </button>
                             </div>
+
+                            {/* Empty Error Message */}
+                            {emptyError && (
+                                <div className="text-red-400 text-center py-2">
+                                    {emptyError}
+                                </div>
+                            )}
 
                             {/* Status Messages */}
                             {submitStatus === "success" && (
