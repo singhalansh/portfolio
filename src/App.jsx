@@ -19,6 +19,16 @@ const App = () => {
     const contentRef = useRef(null);
     const [contentHeight, setContentHeight] = useState(0);
     const [showLeftNav, setShowLeftNav] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 1024); // lg: 1024px
+        };
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     useEffect(() => {
         const calculateContentHeight = () => {
@@ -53,7 +63,7 @@ const App = () => {
     }, []);
 
     useEffect(() => {
-        if (!contentHeight) return;
+        if (isMobile || !contentHeight) return;
 
         // Kill previous triggers to avoid duplicates
         ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -77,7 +87,7 @@ const App = () => {
         return () => {
             ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
         };
-    }, [contentHeight]);
+    }, [contentHeight, isMobile]);
     return (
         <div className="overflow-x-hidden lg:overflow-y-hidden">
             <div className="fixed top-0 left-0 z-[150] w-full">
@@ -86,13 +96,36 @@ const App = () => {
 
             <div
                 ref={curtainContainerRef}
-                className="relative z-[100]"
-                style={{ height: `${contentHeight}px` }}
+                className={isMobile ? "relative z-[100]" : "relative z-[100]"}
+                style={isMobile ? {} : { height: `${contentHeight}px` }}
             >
+                {/* Hero - place at top for mobile */}
+                {isMobile && (
+                    <div
+                        ref={heroRef}
+                        className="relative w-full md:h-screen z-[200]"
+                        style={{
+                            position: "static",
+                            top: "auto",
+                            left: "auto",
+                        }}
+                    >
+                        <Hero />
+                    </div>
+                )}
                 {/* Content */}
                 <div
                     ref={contentRef}
-                    className="absolute top-0 w-full overflow-hidden"
+                    className={
+                        isMobile
+                            ? "relative w-full"
+                            : "absolute top-0 w-full overflow-hidden"
+                    }
+                    style={
+                        isMobile
+                            ? { position: "static", top: "auto", left: "auto" }
+                            : {}
+                    }
                 >
                     <div className="relative" id="about">
                         <About />
@@ -110,14 +143,15 @@ const App = () => {
                         <LetsTalkFooter />
                     </div>
                 </div>
-
-                {/* Hero */}
-                <div
-                    ref={heroRef}
-                    className="absolute top-0 left-0 w-full h-screen z-[200]"
-                >
-                    <Hero />
-                </div>
+                {/* Hero for desktop (absolute overlay) */}
+                {!isMobile && (
+                    <div
+                        ref={heroRef}
+                        className="absolute top-0 left-0 w-full h-screen z-[200]"
+                    >
+                        <Hero />
+                    </div>
+                )}
             </div>
         </div>
     );
