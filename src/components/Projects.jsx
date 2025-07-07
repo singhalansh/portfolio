@@ -6,17 +6,6 @@ import navigateaiimg from "../assets/navigateai.png";
 const projects = [
     {
         id: 1,
-        title: "Luna - AI Restaurant Receptionist",
-        description:
-            "Voice-based agent built using Vapi that handles reservations, FAQs, and customer interactions in natural language.",
-        image: "https://media.licdn.com/dms/image/v2/D5610AQEpFnAEFBnoKw/videocover-low/B56ZdBE6SVHoBg-/0/1749143501183?e=2147483647&v=beta&t=qfTuACLdMLNmYW-tJUFnqGtef0uoB7f628i8gtspZc8",
-        tags: ["VAPI", "Voice AI", "Agentic AI", "real life"],
-        categories: ["AI Agents", "Chatbots"],
-        liveUrl:
-            "https://vapi.ai?demo=true&shareKey=63c7a6f5-1eaa-427e-b090-18675f7af789&assistantId=eec0247b-d45f-4d62-b8e6-0fece73b1ca9",
-    },
-    {
-        id: 2,
         title: "VitalsView – Patient Health Dashboard",
         description:
             "A secure dashboard built for GLP-1 weight-loss patients to track progress, visualize vitals, view shipment info, and chat with an AI assistant for guidance.",
@@ -28,7 +17,7 @@ const projects = [
     },
 
     {
-        id: 3,
+        id: 2,
         title: "Vasundhara",
         description:
             "Award-winning climate tech platform that promotes sustainability through carbon tracking, gamification, and eco rewards.",
@@ -38,7 +27,7 @@ const projects = [
         githubUrl: "https://github.com/singhalansh/vasundhara",
     },
     {
-        id: 4,
+        id: 3,
         title: "LawyerUp",
         description:
             "AI-powered legal helpdesk that answers legal queries, explains rights, and recommends next steps. Built for LexHack.",
@@ -49,7 +38,7 @@ const projects = [
         githubUrl: "https://github.com/singhalansh/lawyerup-app",
     },
     {
-        id: 5,
+        id: 4,
         title: "Flipkart Clone",
         description:
             "A full-featured Flipkart clone built with modern web technologies, featuring authentication, product listings, cart, and responsive UI.",
@@ -60,7 +49,7 @@ const projects = [
         githubUrl: "https://github.com/singhalansh/flipkart-clone",
     },
     {
-        id: 6,
+        id: 5,
         title: "Navigate AI - Object Tracker",
         description:
             "Real-time YOLO + OpenCV-based vehicle detection and multi-object tracker with timestamping and counting.",
@@ -79,7 +68,7 @@ const projects = [
     },
 
     {
-        id: 7,
+        id: 6,
         title: "MegaBlog",
         description:
             "A sleek MERN-based blog platform powered by Appwrite for backend services and auth. Full-stack showcase project.",
@@ -89,7 +78,7 @@ const projects = [
         githubUrl: "https://github.com/singhalansh/megablog",
     },
     {
-        id: 8,
+        id: 7,
         title: "Mental Health Bot",
         description:
             "Empathetic RAG-based chatbot for mental health support built with n8n and MongoDB, no-code workflows only.",
@@ -98,7 +87,7 @@ const projects = [
         categories: ["Chatbots", "AI Agents"],
     },
     {
-        id: 9,
+        id: 8,
         title: "Bablu Bot",
         description:
             "Your personal AI assistant trained on all things Ansh — built using RAG and embedding-based retrieval.",
@@ -107,7 +96,7 @@ const projects = [
         categories: ["Personal", "AI Agents", "Chatbots"],
     },
     {
-        id: 10,
+        id: 9,
         title: "EMS - Employee Manager",
         description:
             "Full-stack dashboard to manage employees, tasks, and leaves with modern UI and role-based access control.",
@@ -117,7 +106,7 @@ const projects = [
         githubUrl: "https://github.com/singhalansh/ems-platform",
     },
     {
-        id: 11,
+        id: 10,
         title: "MLSMOTE Balancer",
         description:
             "A utility for handling multi-label imbalance in datasets using MLSMOTE technique. Plug-and-play for ML pipelines.",
@@ -126,7 +115,7 @@ const projects = [
         categories: ["AI/ML"],
     },
     {
-        id: 12,
+        id: 11,
         title: "UNet 3D Medical Segmentation",
         description:
             "3D UNet implementation in PyTorch for volumetric data segmentation of medical scans. GPU-accelerated.",
@@ -135,7 +124,7 @@ const projects = [
         categories: ["AI/ML"],
     },
     {
-        id: 13,
+        id: 12,
         title: "Virtual Keyboard ",
         description:
             "A virtual keyboard that uses OpenCV and hand landmark tracking to detect fingertip movements and simulate key presses in real-time.",
@@ -151,7 +140,7 @@ const projects = [
             "https://github.com/singhalansh/projects/blob/master/Virtual_Keyboard.py",
     },
     {
-        id: 14,
+        id: 13,
         title: "VisionScope ",
         description:
             "A real-time computer vision system that detects and highlights facial features including face, eyes, and lips using OpenCV. Built for rapid and responsive facial analysis.",
