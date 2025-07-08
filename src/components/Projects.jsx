@@ -11,7 +11,7 @@ const projects = [
             "A secure dashboard built for GLP-1 weight-loss patients to track progress, visualize vitals, view shipment info, and chat with an AI assistant for guidance.",
         image: "https://t3.ftcdn.net/jpg/02/68/29/36/360_F_268293613_UcIcq3A1HnJqdW6PjF8FuEid9UjWL3Dg.jpg",
         tags: ["React", "Supabase", "AI Chatbot", "Healthcare", "Full Stack"],
-        categories: ["Dashboards", "AI Assistants"],
+        categories: ["Full Stack"],
         liveUrl: "https://vitalsview.vercel.app",
         githubUrl: "https://github.com/singhalansh/bloom-patient-view",
     },
