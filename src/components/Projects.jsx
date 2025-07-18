@@ -15,6 +15,18 @@ const projects = [
         liveUrl: "https://vitalsview.vercel.app",
         githubUrl: "https://github.com/singhalansh/bloom-patient-view",
     },
+    {
+    id: 14,
+    title: "The Fitness Garage – Gym Website & Booking System",
+    description:
+        "A professional website designed to establish the gym's online presence, featuring session booking, trainer info, and sections for yoga, calisthenics, and aerobics. Built to boost client engagement and trust.",
+    image: "/gym.jpg", // replace with actual image if needed
+    tags: ["Next.js", "Tailwind CSS", "Booking System", "Fitness", "Frontend"],
+    categories: ["Full Stack"],
+    liveUrl: "https://thefitnessgarage.vercel.app",
+    githubUrl: "" // Not public yet
+},
+
 
     {
         id: 2,
