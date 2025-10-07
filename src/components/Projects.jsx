@@ -5,6 +5,16 @@ import navigateaiimg from "../assets/navigateai.png";
 
 const projects = [
     {
+    "id": 15,
+    "title": "Civic Issue Reporting System",
+    "description": "A platform that enables residents to report civic issues like potholes, leaks, and garbage quickly, while allowing cities to respond faster. Features include voice-based reporting, multilingual transcription, AI validation, automated routing, live maps, and community engagement.",
+    "image": "https://www.shutterstock.com/image-vector/active-citizen-concept-vocal-advocate-600nw-2436334067.jpg",
+    "tags": ["React", "VAPI", "AI", "Community Engagement", "Full Stack"],
+    "categories": ["Full Stack"],
+    "liveUrl": "https://kaizen-prod.vercel.app",
+},
+
+    {
         id: 1,
         title: "VitalsView – Patient Health Dashboard",
         description:
