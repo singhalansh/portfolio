@@ -1,196 +1,8 @@
 import React, { useState } from "react";
-import { ExternalLink, Github, Play, Zap } from "lucide-react";
-import lawyerupimg from "../assets/lawyerup.png";
-import navigateaiimg from "../assets/navigateai.png";
-
-const projects = [
-    {
-    "id": 15,
-    "title": "Civic Issue Reporting System",
-    "description": "A platform that enables residents to report civic issues like potholes, leaks, and garbage quickly, while allowing cities to respond faster. Features include voice-based reporting, multilingual transcription, AI validation, automated routing, live maps, and community engagement.",
-    "image": "https://www.shutterstock.com/image-vector/active-citizen-concept-vocal-advocate-600nw-2436334067.jpg",
-    "tags": ["React", "VAPI", "AI", "Community Engagement", "Full Stack"],
-    "categories": ["Full Stack"],
-    "liveUrl": "https://kaizen-prod.vercel.app",
-},
-
-    {
-        id: 1,
-        title: "VitalsView – Patient Health Dashboard",
-        description:
-            "A secure dashboard built for GLP-1 weight-loss patients to track progress, visualize vitals, view shipment info, and chat with an AI assistant for guidance.",
-        image: "https://t3.ftcdn.net/jpg/02/68/29/36/360_F_268293613_UcIcq3A1HnJqdW6PjF8FuEid9UjWL3Dg.jpg",
-        tags: ["React", "Supabase", "AI Chatbot", "Healthcare", "Full Stack"],
-        categories: ["Full Stack"],
-        liveUrl: "https://vitalsview.vercel.app",
-        githubUrl: "https://github.com/singhalansh/bloom-patient-view",
-    },
-    {
-    id: 14,
-    title: "The Fitness Garage – Gym Website & Booking System",
-    description:
-        "A professional website designed to establish the gym's online presence, featuring session booking, trainer info, and sections for yoga, calisthenics, and aerobics. Built to boost client engagement and trust.",
-    image: "/gym.jpg", // replace with actual image if needed
-    tags: ["Next.js", "Tailwind CSS", "Booking System", "Fitness", "Frontend"],
-    categories: ["Full Stack"],
-    liveUrl: "https://thefitnessgarage.vercel.app",
-    githubUrl: "" // Not public yet
-},
-
-
-    {
-        id: 2,
-        title: "Vasundhara",
-        description:
-            "Award-winning climate tech platform that promotes sustainability through carbon tracking, gamification, and eco rewards.",
-        image: "https://media.istockphoto.com/id/163858567/vector/three-illustrated-green-leaves-in-a-circle.jpg?s=612x612&w=0&k=20&c=MSo6IWhtqa0m9_JQUwDFdmWgsrm2SCSg3FbESxNIPmA=",
-        tags: ["Sustainability", "Gamification", "MERN", "Hackathon Winner"],
-        categories: ["Mobile", "AI/ML", "Full Stack"],
-        githubUrl: "https://github.com/singhalansh/vasundhara",
-    },
-    {
-        id: 3,
-        title: "LawyerUp",
-        description:
-            "AI-powered legal helpdesk that answers legal queries, explains rights, and recommends next steps. Built for LexHack.",
-        image: lawyerupimg,
-        tags: ["LegalTech", "RAG", "Chatbot", "Hackathon winner"],
-        categories: ["Full Stack", "Chatbots", "AI Agents"],
-        liveUrl: "https://lawyerupapp.vercel.app/",
-        githubUrl: "https://github.com/singhalansh/lawyerup-app",
-    },
-    {
-        id: 4,
-        title: "Flipkart Clone",
-        description:
-            "A full-featured Flipkart clone built with modern web technologies, featuring authentication, product listings, cart, and responsive UI.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrx6s7w6AM2E8Iym-rnzSPoYkRoBIj_OU-IA&s",
-        tags: ["React", "E-commerce", "Clone", "Full Stack"],
-        categories: ["Full Stack"],
-        liveUrl: "https://flipkartcloneansh.vercel.app/",
-        githubUrl: "https://github.com/singhalansh/flipkart-clone",
-    },
-    {
-        id: 5,
-        title: "Navigate AI - Object Tracker",
-        description:
-            "Real-time YOLO + OpenCV-based vehicle detection and multi-object tracker with timestamping and counting.",
-        image: navigateaiimg,
-        tags: [
-            "YOLO",
-            "OpenCV",
-            "Python",
-            "Computer Vision",
-            "Hackathon Winner",
-        ],
-        categories: ["Computer Vision", "AI/ML"],
-        liveUrl: "https://navigateai.streamlit.app/",
-        githubUrl:
-            "https://github.com/singhalansh/object-detection-and-tracking",
-    },
-
-    {
-        id: 6,
-        title: "MegaBlog",
-        description:
-            "A sleek MERN-based blog platform powered by Appwrite for backend services and auth. Full-stack showcase project.",
-        image: "https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx.jpg",
-        tags: ["MERN", "Appwrite", "Blog", "Full Stack"],
-        categories: ["Full Stack"],
-        githubUrl: "https://github.com/singhalansh/megablog",
-    },
-    {
-        id: 7,
-        title: "Mental Health Bot",
-        description:
-            "Empathetic RAG-based chatbot for mental health support built with n8n and MongoDB, no-code workflows only.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3q4meyK9t48AxulnZhiKJbQKSCO4txaf_yA&s",
-        tags: ["Mental Health", "n8n", "RAG", "MongoDB"],
-        categories: ["Chatbots", "AI Agents"],
-    },
-    {
-        id: 8,
-        title: "Bablu Bot",
-        description:
-            "Your personal AI assistant trained on all things Ansh — built using RAG and embedding-based retrieval.",
-        image: "https://i0.wp.com/living.ai/wp-content/uploads/2020/12/Details18.jpg?fit=680%2C440&quality=89&ssl=1",
-        tags: ["RAG", "Embeddings", "Chatbot", "OpenAI"],
-        categories: ["Personal", "AI Agents", "Chatbots"],
-    },
-    {
-        id: 9,
-        title: "EMS - Employee Manager",
-        description:
-            "Full-stack dashboard to manage employees, tasks, and leaves with modern UI and role-based access control.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoszakz2X5s1Vu0AgSyxCxTpDMckLOhrxQxQ&s",
-        tags: ["MERN", "Dashboard", "RBAC", "CRUD"],
-        categories: ["Full Stack"],
-        githubUrl: "https://github.com/singhalansh/ems-platform",
-    },
-    {
-        id: 10,
-        title: "MLSMOTE Balancer",
-        description:
-            "A utility for handling multi-label imbalance in datasets using MLSMOTE technique. Plug-and-play for ML pipelines.",
-        image: "https://dl.acm.org/cms/attachment/html/10.1145/3512452.3512453/assets/html/images/image2.png",
-        tags: ["Machine Learning", "Data Imbalance", "SMOTE", "Python"],
-        categories: ["AI/ML"],
-    },
-    {
-        id: 11,
-        title: "UNet 3D Medical Segmentation",
-        description:
-            "3D UNet implementation in PyTorch for volumetric data segmentation of medical scans. GPU-accelerated.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5FtYNQLtoqdTeke5NLnhSenhIngf2c-LZA&s",
-        tags: ["Medical Imaging", "3D UNet", "PyTorch", "Deep Learning"],
-        categories: ["AI/ML"],
-    },
-    {
-        id: 12,
-        title: "Virtual Keyboard ",
-        description:
-            "A virtual keyboard that uses OpenCV and hand landmark tracking to detect fingertip movements and simulate key presses in real-time.",
-        image: "https://editor.analyticsvidhya.com/uploads/18187Screenshot%202021-09-16%20224952.png",
-        tags: [
-            "OpenCV",
-            "Hand Tracking",
-            "Python",
-            "Human-Computer Interaction",
-        ],
-        categories: ["Computer Vision", "AI/ML", "Personal"],
-        githubUrl:
-            "https://github.com/singhalansh/projects/blob/master/Virtual_Keyboard.py",
-    },
-    {
-        id: 13,
-        title: "VisionScope ",
-        description:
-            "A real-time computer vision system that detects and highlights facial features including face, eyes, and lips using OpenCV. Built for rapid and responsive facial analysis.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwJns0JqaFaxnXG_zbRtFFVzOfco1uIxypgQ&s",
-        tags: [
-            "OpenCV",
-            "Face Detection",
-            "Eyes",
-            "Lips",
-            "Real-time",
-            "Python",
-        ],
-        categories: ["Computer Vision", "AI/ML", "Personal"],
-        githubUrl:
-            "https://github.com/singhalansh/projects/blob/master/smile%20detection.py",
-    },
-];
-
-const categories = [
-    "All",
-    "AI Agents",
-    "AI/ML",
-    "Chatbots",
-    "Computer Vision",
-    "Full Stack",
-    "Mobile",
-    "Personal",
-];
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import { projects, categories } from "../data/projects";
 
 export default function Projects() {
     const [activeCategory, setActiveCategory] = useState("All");
@@ -202,7 +14,7 @@ export default function Projects() {
             : projects.filter(
                   (project) =>
                       project.categories &&
-                      project.categories.includes(activeCategory)
+                      project.categories.includes(activeCategory),
               );
 
     return (
@@ -245,110 +57,133 @@ export default function Projects() {
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {filteredProjects.map((project, index) => (
-                        <div
+                        <motion.div
                             key={project.id}
-                            className={`group relative bg-white border border-[#F8F8F8] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col h-full`}
-                            onMouseEnter={() => setHoveredProject(project.id)}
-                            onMouseLeave={() => setHoveredProject(null)}
-                            style={{
-                                animationDelay: `${index * 100}ms`,
-                            }}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                            whileHover={{ y: -8 }}
+                            className="group relative"
                         >
-                            {/* Image Container */}
-                            <div className="relative h-48 overflow-hidden flex-shrink-0">
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-t-2xl"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#222222]/60 via-[#222222]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            <Link
+                                to={`/${project.slug}`}
+                                className="bg-white border border-[#F8F8F8] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col h-full cursor-pointer"
+                                onMouseEnter={() => setHoveredProject(project.id)}
+                                onMouseLeave={() => setHoveredProject(null)}
+                            >
+                                {/* Image Container */}
+                                <div className="relative h-48 overflow-hidden flex-shrink-0">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 rounded-t-2xl"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#222222]/70 via-[#222222]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                                {/* Overlay Actions */}
-                                <div
-                                    className={`absolute inset-0 flex items-center justify-center gap-3 transition-all duration-300 ${
-                                        hoveredProject === project.id
-                                            ? "opacity-100 visible"
-                                            : "opacity-0 invisible"
-                                    }`}
-                                >
-                                    {project.liveUrl && (
-                                        <a
-                                            href={project.liveUrl}
-                                            className="bg-white text-[#222222] p-3 rounded-full border border-[#F8F8F8] hover:bg-[#F8F8F8] transition-all duration-200 hover:scale-110 shadow"
-                                            title="View Live"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
+                                    {/* View Details Overlay */}
+                                    <div
+                                        className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${
+                                            hoveredProject === project.id
+                                                ? "opacity-100 visible"
+                                                : "opacity-0 invisible"
+                                        }`}
+                                    >
+                                        <motion.div
+                                            initial={{ scale: 0.8 }}
+                                            whileHover={{ scale: 1.1 }}
+                                            className="bg-white text-[#222222] px-5 py-2 rounded-full font-medium shadow-lg flex items-center gap-2"
                                         >
-                                            <ExternalLink size={18} />
-                                        </a>
-                                    )}
-                                    {project.githubUrl && (
-                                        <a
-                                            href={project.githubUrl}
-                                            className="bg-white text-[#222222] p-3 rounded-full border border-[#F8F8F8] hover:bg-[#F8F8F8] transition-all duration-200 hover:scale-110 shadow"
-                                            title="View Code"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <Github size={18} />
-                                        </a>
-                                    )}
+                                            View Details
+                                            <ArrowRight size={16} />
+                                        </motion.div>
+                                    </div>
+
+                                    {/* Quick action buttons on hover */}
+                                    <div
+                                        className={`absolute bottom-3 right-3 flex gap-2 transition-all duration-300 ${
+                                            hoveredProject === project.id
+                                                ? "opacity-100 translate-y-0"
+                                                : "opacity-0 translate-y-2"
+                                        }`}
+                                    >
+                                        {project.liveUrl && (
+                                            <a
+                                                href={project.liveUrl}
+                                                onClick={(e) => e.stopPropagation()}
+                                                className="bg-white text-[#222222] p-2 rounded-full border border-[#F8F8F8] hover:bg-[#F8F8F8] transition-all duration-200 hover:scale-110 shadow-md"
+                                                title="View Live"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <ExternalLink size={14} />
+                                            </a>
+                                        )}
+                                        {project.githubUrl && (
+                                            <a
+                                                href={project.githubUrl}
+                                                onClick={(e) => e.stopPropagation()}
+                                                className="bg-white text-[#222222] p-2 rounded-full border border-[#F8F8F8] hover:bg-[#F8F8F8] transition-all duration-200 hover:scale-110 shadow-md"
+                                                title="View Code"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <Github size={14} />
+                                            </a>
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
 
-                            {/* Content - Flexible container */}
-                            <div className="p-6 flex flex-col flex-grow">
-                                <div className="flex items-start justify-between mb-3">
-                                    <h3 className="text-xl font-bold text-[#222222] group-hover:text-[#7B7B7B] transition-colors font-poppins">
-                                        {project.title}
-                                    </h3>
-                                    <span className="text-xs font-medium text-[#7B7B7B] bg-[#F8F8F8] px-2 py-1 rounded-full flex-shrink-0">
-                                        {project.categories
-                                            ? project.categories.join(", ")
-                                            : ""}
-                                    </span>
-                                </div>
+                                {/* Content - Flexible container */}
+                                <div className="p-6 flex flex-col flex-grow">
+                                    <div className="flex items-start justify-between mb-3">
+                                        <h3 className="text-xl font-bold text-[#222222] group-hover:text-[#7B7B7B] transition-colors font-poppins">
+                                            {project.title}
+                                        </h3>
+                                        <span className="text-xs font-medium text-[#7B7B7B] bg-[#F8F8F8] px-2 py-1 rounded-full flex-shrink-0">
+                                            {project.categories
+                                                ? project.categories[0]
+                                                : ""}
+                                        </span>
+                                    </div>
 
-                                <p className="text-[#7B7B7B] text-sm leading-relaxed mb-4 line-clamp-3 font-poppins">
-                                    {project.description}
-                                </p>
+                                    <p className="text-[#7B7B7B] text-sm leading-relaxed mb-4 line-clamp-3 font-poppins">
+                                        {project.description}
+                                    </p>
 
-                                {/* Spacer to push button to bottom */}
-                                <div className="flex-grow"></div>
+                                    {/* Tags */}
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        {project.tags?.slice(0, 3).map((tag, tagIndex) => (
+                                            <span
+                                                key={tagIndex}
+                                                className="text-xs px-2 py-1 bg-[#F8F8F8] text-[#7B7B7B] rounded-md"
+                                            >
+                                                {tag}
+                                            </span>
+                                        ))}
+                                        {project.tags?.length > 3 && (
+                                            <span className="text-xs px-2 py-1 bg-[#F8F8F8] text-[#7B7B7B] rounded-md">
+                                                +{project.tags.length - 3}
+                                            </span>
+                                        )}
+                                    </div>
 
-                                {/* Action Button - Fixed at bottom */}
-                                <div className="mt-auto pt-2 flex gap-3">
-                                    {project.liveUrl && (
-                                        <a
-                                            href={project.liveUrl}
-                                            className="flex-1 bg-[#222222] text-white text-sm font-medium py-2 px-4 rounded-lg hover:bg-[#333333] transition-all duration-200 text-center flex items-center justify-center gap-2 group/btn font-poppins"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <ExternalLink
-                                                size={14}
-                                                className="group-hover/btn:scale-110 transition-transform"
+                                    {/* Spacer to push button to bottom */}
+                                    <div className="flex-grow"></div>
+
+                                    {/* View Project Button */}
+                                    <div className="mt-auto pt-2">
+                                        <div className="w-full bg-gradient-to-r from-[#222222] to-[#333333] text-white text-sm font-medium py-3 px-4 rounded-xl hover:from-[#333333] hover:to-[#444444] transition-all duration-300 text-center flex items-center justify-center gap-2 group/btn font-poppins">
+                                            Explore Project
+                                            <ArrowRight
+                                                size={16}
+                                                className="group-hover/btn:translate-x-1 transition-transform"
                                             />
-                                            Live Demo
-                                        </a>
-                                    )}
-                                    {project.githubUrl && (
-                                        <a
-                                            href={project.githubUrl}
-                                            className="flex-1 border border-[#7B7B7B] text-[#222222] text-sm font-medium py-2 px-4 rounded-lg hover:bg-[#F8F8F8] transition-all duration-200 text-center flex items-center justify-center gap-2 group/btn font-poppins"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <Github
-                                                size={14}
-                                                className="group-hover/btn:scale-110 transition-transform"
-                                            />
-                                            Code
-                                        </a>
-                                    )}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </Link>
+                        </motion.div>
                     ))}
                 </div>
             </div>
