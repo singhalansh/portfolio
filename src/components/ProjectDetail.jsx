@@ -171,7 +171,7 @@ export default function ProjectDetail() {
         .filter(
             (p) =>
                 p.id !== project.id &&
-                p.categories?.some((cat) => project.categories?.includes(cat))
+                p.categories?.some((cat) => project.categories?.includes(cat)),
         )
         .slice(0, 3);
 
@@ -379,23 +379,23 @@ export default function ProjectDetail() {
                                             __html: project.longDescription
                                                 .replace(
                                                     /## (.*)/g,
-                                                    '<h2 class="text-2xl font-bold text-[#222222] mt-8 mb-4 first:mt-0">$1</h2>'
+                                                    '<h2 class="text-2xl font-bold text-[#222222] mt-8 mb-4 first:mt-0">$1</h2>',
                                                 )
                                                 .replace(
                                                     /### (.*)/g,
-                                                    '<h3 class="text-xl font-semibold text-[#222222] mt-6 mb-3 flex items-center gap-2">$1</h3>'
+                                                    '<h3 class="text-xl font-semibold text-[#222222] mt-6 mb-3 flex items-center gap-2">$1</h3>',
                                                 )
                                                 .replace(
                                                     /\*\*(.*?)\*\*/g,
-                                                    '<strong class="font-semibold text-[#222222]">$1</strong>'
+                                                    '<strong class="font-semibold text-[#222222]">$1</strong>',
                                                 )
                                                 .replace(
                                                     /- (.*)/g,
-                                                    '<li class="text-[#7B7B7B] mb-2 ml-4 list-disc">$1</li>'
+                                                    '<li class="text-[#7B7B7B] mb-2 ml-4 list-disc">$1</li>',
                                                 )
                                                 .replace(
                                                     /\n\n/g,
-                                                    '</p><p class="text-[#7B7B7B] mb-4 leading-relaxed">'
+                                                    '</p><p class="text-[#7B7B7B] mb-4 leading-relaxed">',
                                                 ),
                                         }}
                                     />

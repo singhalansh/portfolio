@@ -1,93 +1,98 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @layer base {
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
 
-  html, body {
-    @apply font-sans overscroll-none overflow-x-hidden;
-    background: #f8f8f8;
-    scroll-behavior: smooth;
-  }
+    html,
+    body {
+        @apply font-sans overscroll-none overflow-x-hidden;
+        background: #f8f8f8;
+        scroll-behavior: smooth;
+    }
 }
 
 @layer utilities {
-  .animate-bounce-slow {
-    animation: bounce-slow 1.5s infinite;
-  }
-  @keyframes bounce-slow {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(18px); }
-  }
+    .animate-bounce-slow {
+        animation: bounce-slow 1.5s infinite;
+    }
+    @keyframes bounce-slow {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(18px);
+        }
+    }
 }
 
-
 @layer utilities {
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
-    to {
-      opacity: 1;
-    }
-  }
 
-  .fade-in {
-    animation: fadeIn 2s ease-out forwards;
-  }
+    .fade-in {
+        animation: fadeIn 2s ease-out forwards;
+    }
 }
 
 /* Tailwind config or CSS variables (if using Tailwind, update tailwind.config.js theme colors) */
 /* If using index.css or a global CSS file, add: */
 :root {
-  --color-primary: #222222;
-  --color-secondary: #7B7B7B;
-  --color-tertiary: #F8F8F8;
-  --color-white: #FFFFFF;
+    --color-primary: #222222;
+    --color-secondary: #7b7b7b;
+    --color-tertiary: #f8f8f8;
+    --color-white: #ffffff;
 }
 
 /* Project content markdown styles */
 .project-content h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #222222;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222222;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .project-content h2:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .project-content h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #222222;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #222222;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .project-content p {
-  color: #7B7B7B;
-  margin-bottom: 1rem;
-  line-height: 1.75;
+    color: #7b7b7b;
+    margin-bottom: 1rem;
+    line-height: 1.75;
 }
 
 .project-content ul {
-  list-style-type: disc;
-  list-style-position: inside;
-  margin-bottom: 1rem;
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-bottom: 1rem;
 }
 
 .project-content li {
-  color: #7B7B7B;
-  margin-bottom: 0.5rem;
+    color: #7b7b7b;
+    margin-bottom: 0.5rem;
 }
 
 .project-content strong {
-  font-weight: 600;
-  color: #222222;
+    font-weight: 600;
+    color: #222222;
 }

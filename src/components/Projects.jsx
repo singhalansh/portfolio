@@ -69,7 +69,9 @@ export default function Projects() {
                             <Link
                                 to={`/${project.slug}`}
                                 className="bg-white border border-[#F8F8F8] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col h-full cursor-pointer"
-                                onMouseEnter={() => setHoveredProject(project.id)}
+                                onMouseEnter={() =>
+                                    setHoveredProject(project.id)
+                                }
                                 onMouseLeave={() => setHoveredProject(null)}
                             >
                                 {/* Image Container */}
@@ -110,7 +112,9 @@ export default function Projects() {
                                         {project.liveUrl && (
                                             <a
                                                 href={project.liveUrl}
-                                                onClick={(e) => e.stopPropagation()}
+                                                onClick={(e) =>
+                                                    e.stopPropagation()
+                                                }
                                                 className="bg-white text-[#222222] p-2 rounded-full border border-[#F8F8F8] hover:bg-[#F8F8F8] transition-all duration-200 hover:scale-110 shadow-md"
                                                 title="View Live"
                                                 target="_blank"
@@ -122,7 +126,9 @@ export default function Projects() {
                                         {project.githubUrl && (
                                             <a
                                                 href={project.githubUrl}
-                                                onClick={(e) => e.stopPropagation()}
+                                                onClick={(e) =>
+                                                    e.stopPropagation()
+                                                }
                                                 className="bg-white text-[#222222] p-2 rounded-full border border-[#F8F8F8] hover:bg-[#F8F8F8] transition-all duration-200 hover:scale-110 shadow-md"
                                                 title="View Code"
                                                 target="_blank"
@@ -153,14 +159,16 @@ export default function Projects() {
 
                                     {/* Tags */}
                                     <div className="flex flex-wrap gap-2 mb-4">
-                                        {project.tags?.slice(0, 3).map((tag, tagIndex) => (
-                                            <span
-                                                key={tagIndex}
-                                                className="text-xs px-2 py-1 bg-[#F8F8F8] text-[#7B7B7B] rounded-md"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
+                                        {project.tags
+                                            ?.slice(0, 3)
+                                            .map((tag, tagIndex) => (
+                                                <span
+                                                    key={tagIndex}
+                                                    className="text-xs px-2 py-1 bg-[#F8F8F8] text-[#7B7B7B] rounded-md"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
                                         {project.tags?.length > 3 && (
                                             <span className="text-xs px-2 py-1 bg-[#F8F8F8] text-[#7B7B7B] rounded-md">
                                                 +{project.tags.length - 3}

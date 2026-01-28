@@ -86,23 +86,37 @@ Alin demonstrates strong full-stack and backend ownership across:
 It reflects an understanding of how production ride-hailing systems work beyond just UI replication.
         `,
         image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800",
-        tags: ["Firebase", "Real-time", "Payments", "Maps", "Full Stack", "Pub/Sub"],
+        tags: [
+            "Firebase",
+            "Real-time",
+            "Payments",
+            "Maps",
+            "Full Stack",
+            "Pub/Sub",
+        ],
         categories: ["Full Stack", "Mobile"],
-        techStack: ["React Native", "Firebase", "Firestore", "Cloud Functions", "Google Maps API", "Pub/Sub"],
+        techStack: [
+            "React Native",
+            "Firebase",
+            "Firestore",
+            "Cloud Functions",
+            "Google Maps API",
+            "Pub/Sub",
+        ],
         features: [
             "Real-time ride tracking",
             "Driver assignment logic",
             "Fare calculation engine",
             "Secure payment integration",
             "Live map rendering",
-            "State machine for ride lifecycle"
+            "State machine for ride lifecycle",
         ],
         challenges: [
             "Ensuring consistency between payment and ride states",
             "Handling real-time updates at scale",
-            "Implementing retry logic for critical operations"
+            "Implementing retry logic for critical operations",
         ],
-        year: "2025"
+        year: "2025",
     },
     {
         id: 2,
@@ -163,24 +177,40 @@ This project demonstrates end-to-end ownership of a real-world system involving:
 - Real-time admin workflows
         `,
         image: "https://www.shutterstock.com/image-vector/active-citizen-concept-vocal-advocate-600nw-2436334067.jpg",
-        tags: ["React", "Node.js", "Vapi", "LLM", "JWT", "Real-time", "Full Stack"],
+        tags: [
+            "React",
+            "Node.js",
+            "Vapi",
+            "LLM",
+            "JWT",
+            "Real-time",
+            "Full Stack",
+        ],
         categories: ["Full Stack", "AI Agents"],
         liveUrl: "https://kaizen-prod.vercel.app",
-        techStack: ["React", "Node.js", "Vapi", "MongoDB", "JWT", "OpenAI", "TailwindCSS"],
+        techStack: [
+            "React",
+            "Node.js",
+            "Vapi",
+            "MongoDB",
+            "JWT",
+            "OpenAI",
+            "TailwindCSS",
+        ],
         features: [
             "Manual issue reporting with structured forms",
             "Voice-based reporting via Vapi",
             "LLM-powered transcript normalization",
             "JWT-based authentication",
             "Real-time admin dashboard",
-            "Unified issue storage schema"
+            "Unified issue storage schema",
         ],
         challenges: [
             "Normalizing unstructured voice transcripts into structured data",
             "Implementing real-time updates without polling",
-            "Ensuring consistent schema for both manual and voice reports"
+            "Ensuring consistent schema for both manual and voice reports",
         ],
-        year: "2024"
+        year: "2024",
     },
     {
         id: 3,
@@ -250,24 +280,38 @@ MongoDB is used as the primary datastore due to its flexibility in handling vari
 All business logic, including validation flow, scoring, task completion, and event participation, is implemented in the backend. The frontend is responsible only for interaction and display, not decision-making.
         `,
         image: "https://media.istockphoto.com/id/163858567/vector/three-illustrated-green-leaves-in-a-circle.jpg?s=612x612&w=0&k=20&c=MSo6IWhtqa0m9_JQUwDFdmWgsrm2SCSg3FbESxNIPmA=",
-        tags: ["Sustainability", "AI Validation", "Gamification", "MERN", "Hackathon Winner"],
+        tags: [
+            "Sustainability",
+            "AI Validation",
+            "Gamification",
+            "MERN",
+            "Hackathon Winner",
+        ],
         categories: ["Mobile", "AI/ML", "Full Stack"],
         githubUrl: "https://github.com/singhalansh/vasundhara",
-        techStack: ["React", "Node.js", "MongoDB", "Express", "JWT", "AI/ML", "Tailwind CSS"],
+        techStack: [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Express",
+            "JWT",
+            "AI/ML",
+            "Tailwind CSS",
+        ],
         features: [
             "Photo-based eco-action reporting",
             "AI-powered submission validation",
             "Gamification with verified rewards",
             "Daily eco-tasks for habit formation",
             "Community-driven events",
-            "Multi-role access control"
+            "Multi-role access control",
         ],
         challenges: [
             "Building scalable AI validation without removing human oversight",
             "Preventing client-side manipulation in gamification",
-            "Designing flexible event structures for varied initiatives"
+            "Designing flexible event structures for varied initiatives",
         ],
-        year: "2023"
+        year: "2023",
     },
     {
         id: 4,
@@ -334,21 +378,29 @@ LawyerUp is not a replacement for lawyers. It is a **legal literacy and assistan
         categories: ["Full Stack", "Chatbots", "AI Agents"],
         liveUrl: "https://lawyerupapp.vercel.app/",
         githubUrl: "https://github.com/singhalansh/lawyerup-app",
-        techStack: ["React", "Python", "FastAPI", "OpenAI", "Vector DB", "RAG", "Tailwind CSS"],
+        techStack: [
+            "React",
+            "Python",
+            "FastAPI",
+            "OpenAI",
+            "Vector DB",
+            "RAG",
+            "Tailwind CSS",
+        ],
         features: [
             "Conversational legal query interface",
             "RAG-based grounded responses",
             "Legal document understanding",
             "User session and history tracking",
             "AI safety guardrails",
-            "Modular domain support"
+            "Modular domain support",
         ],
         challenges: [
             "Implementing effective RAG for legal domain accuracy",
             "Designing guardrails to prevent unsafe AI responses",
-            "Balancing helpfulness with responsible AI limitations"
+            "Balancing helpfulness with responsible AI limitations",
         ],
-        year: "2024"
+        year: "2024",
     },
     {
         id: 5,
@@ -404,7 +456,13 @@ Fully optimized for all devices:
 - Higher search engine rankings
         `,
         image: "/gym.jpg",
-        tags: ["Next.js", "Tailwind CSS", "Booking System", "Fitness", "Frontend"],
+        tags: [
+            "Next.js",
+            "Tailwind CSS",
+            "Booking System",
+            "Fitness",
+            "Frontend",
+        ],
         categories: ["Full Stack"],
         liveUrl: "https://thefitnessgarage.vercel.app",
         githubUrl: "",
@@ -415,14 +473,14 @@ Fully optimized for all devices:
             "Multiple class categories",
             "Mobile-responsive design",
             "Contact form integration",
-            "Gallery and testimonials"
+            "Gallery and testimonials",
         ],
         challenges: [
             "Building an intuitive booking flow for all age groups",
             "Optimizing images for fast load times",
-            "Implementing real-time availability updates"
+            "Implementing real-time availability updates",
         ],
-        year: "2024"
+        year: "2024",
     },
     {
         id: 6,
@@ -488,10 +546,17 @@ Flexible input handling:
 - Security and surveillance
         `,
         image: navigateaiimg,
-        tags: ["YOLO", "OpenCV", "Python", "Computer Vision", "Hackathon Winner"],
+        tags: [
+            "YOLO",
+            "OpenCV",
+            "Python",
+            "Computer Vision",
+            "Hackathon Winner",
+        ],
         categories: ["Computer Vision", "AI/ML"],
         liveUrl: "https://navigateai.streamlit.app/",
-        githubUrl: "https://github.com/singhalansh/object-detection-and-tracking",
+        githubUrl:
+            "https://github.com/singhalansh/object-detection-and-tracking",
         techStack: ["Python", "YOLO", "OpenCV", "NumPy", "Streamlit"],
         features: [
             "Real-time vehicle detection",
@@ -499,14 +564,14 @@ Flexible input handling:
             "Entry/exit timestamping",
             "Directional vehicle counting",
             "Path trajectory visualization",
-            "Web-based interface"
+            "Web-based interface",
         ],
         challenges: [
             "Maintaining tracking accuracy during occlusion",
             "Optimizing for real-time performance",
-            "Handling various lighting conditions"
+            "Handling various lighting conditions",
         ],
-        year: "2024"
+        year: "2024",
     },
 ];
 
