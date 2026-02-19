@@ -85,7 +85,8 @@ Alin demonstrates strong full-stack and backend ownership across:
 
 It reflects an understanding of how production ride-hailing systems work beyond just UI replication.
         `,
-        image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800",
+        image: "https://firebasestorage.googleapis.com/v0/b/alin-8588a.firebasestorage.app/o/assets%2Falin-logo.jpg?alt=media&token=8bae9322-4b89-4456-a240-efd7a413fa25",
+        liveUrl: "https://play.google.com/store/apps/details?id=com.ansh.ridehailingpassenger",
         tags: [
             "Firebase",
             "Real-time",

@@ -1,21 +1,16 @@
 import React, { useState } from "react";
-import gsap from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
-gsap.registerPlugin(ScrollToPlugin);
 
 function LeftNav({ visible = false }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const scrollToSection = (id) => {
-        gsap.to(window, {
-            duration: 0.5,
-            scrollTo: `#${id}`,
-            ease: "none",
-        });
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView(); // No smooth scroll
+        }
         setIsMenuOpen(false);
     };
-    console.log(visible)
+    console.log(visible);
     return (
         <nav
             className={`!fixed w-full px-4 sm:px-6 lg:px-8 py-2 lg:pl-60 ${

@@ -7,7 +7,7 @@ import {
 } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
+// import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures"; // Disabled to allow page scroll
 import {
     Trophy,
     Medal,
@@ -55,8 +55,9 @@ const AchievementsSection = () => {
         },
         [
             Autoplay({ delay: 1000, stopOnInteraction: false }),
-            WheelGesturesPlugin(),
-        ]
+            // Disabled WheelGesturesPlugin to allow normal page scrolling
+            // WheelGesturesPlugin(),
+        ],
     );
 
     // Mock images for demo - replace with your actual images
@@ -181,7 +182,7 @@ const AchievementsSection = () => {
         (index) => {
             if (emblaApi) emblaApi.scrollTo(index);
         },
-        [emblaApi]
+        [emblaApi],
     );
 
     const toggleAutoplay = useCallback(() => {
@@ -591,7 +592,7 @@ const AchievementsSection = () => {
                                                             >
                                                                 {tag}
                                                             </motion.span>
-                                                        )
+                                                        ),
                                                     )}
                                                 </motion.div>
                                             </div>
